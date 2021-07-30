@@ -73,6 +73,9 @@ echo "Modifying System Preferences Defaults..."
 defaults write com.apple.finder AppleShowAllFiles -string YES
 killall Finder
 
+# Prevent .DS_Store files in Network folders.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -boolean true
+
 # Screen Capture
 defaults write com.apple.screencapture type PNG
 defaults write com.apple.screencapture location ~/Desktop
